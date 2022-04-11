@@ -4,6 +4,7 @@ const cors = require('cors');
 const app = express()
 const usuarios = require('./routes/usuariosRoute');
 const sequelize = require('./db/dataBase');
+const personajes = require('./routes/personajesRoute');
 
 
 
@@ -29,6 +30,7 @@ app.use(cors())
 
 //Routes
 app.use('/usuario', usuarios)
+app.use('/personaje', personajes)
 
 
 
